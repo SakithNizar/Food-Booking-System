@@ -1,0 +1,16 @@
+{
+  "name": "catering",
+  "version": "1.0.0",
+  "description": "Partial System",
+  "main": "index.js",
+  "scripts": {
+    "client": "cd frontend && npm run dev",
+    "server": "cd backend && npm run dev",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
