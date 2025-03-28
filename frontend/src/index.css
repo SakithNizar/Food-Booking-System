@@ -1,13 +1,45 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+:root {
+    --primary-brown: #5c4030;
+    --primary-green: #446a44;
+    --light-brown: #a08070;
+    --very-light-brown: #f2e9e4;
+    --secondary-green: #688b68;
+    --light-green: #a1c1a1;
+    --very-light-green: #e9f1e9;
+    --gray: #9a9a9a;
+    --dark-gray: #444444;
+    --white: #ffffff;
+    --black: #333333;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  body {
+    background-color: var(--very-light-brown);
+    color: var(--black);
+  }
+  
+  button {
+    cursor: pointer;
+    background-color: var(--primary-green);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: var(--secondary-green);
+  }
+  
+  button:disabled {
+    background-color: var(--gray);
+    cursor: not-allowed;
+  }

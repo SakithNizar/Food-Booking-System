@@ -1,0 +1,39 @@
+.customer-dashboard {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Inter', sans-serif;
+}
+
+.dashboard-content {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.transportation-container {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.booking-actions {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.book-button {
+  background-color: #527853;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.book-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}

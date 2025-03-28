@@ -1,0 +1,103 @@
+.transport-option-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  background: white;
+  transition: all 0.3s ease;
+}
+
+.transport-option-card.selected {
+  border-color: #527853;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.transport-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.selection-indicator {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.selection-indicator h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.transport-badge {
+  background: #e8f5e9;
+  color: #527853;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.transport-details {
+  margin-bottom: 20px;
+}
+
+.detail-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.detail-icon {
+  margin-right: 10px;
+  width: 20px;
+}
+
+.booking-form {
+  background: #f5f5f5;
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.form-group {
+  flex: 1;
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #555;
+}
+
+.form-control {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.book-button {
+  background: #64a266;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  width: 100%;
+}
+
+.book-button:hover {
+  background: #5fac63;
+}

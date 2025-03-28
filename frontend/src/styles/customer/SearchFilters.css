@@ -1,0 +1,62 @@
+.search-filters {
+  margin-bottom: 30px;
+}
+
+.search-filters h1 {
+  font-size: 24px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.subtitle {
+  color: #666;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.date-selection {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.date-field {
+  flex: 1;
+}
+
+.date-field label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #333;
+}
+
+.date-input-container,
+.time-input-container {
+  display: flex;
+  gap: 10px;
+}
+
+.date-input-container input,
+.time-input-container input,
+.flight-input,
+.passenger-select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 100%;
+}
+
+.flight-info,
+.passenger-selection {
+  margin-bottom: 20px;
+}
+
+.flight-info label,
+.passenger-selection label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #333;
+}

@@ -1,0 +1,71 @@
+.transport-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .transport-option {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .transport-option-card {
+    display: block;
+    padding: 15px;
+    cursor: pointer;
+  }
+  
+  .option-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .option-header input[type="radio"] {
+    margin-right: 15px;
+  }
+  
+  .option-header h3 {
+    margin: 0;
+    flex-grow: 1;
+    font-size: 16px;
+  }
+  
+  .price-tag {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .option-details ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 0 30px;
+  }
+  
+  .option-details li {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .feature-icon {
+    margin-right: 10px;
+    display: inline-block;
+    width: 20px;
+  }
+  
+  .additional-fee {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+    font-size: 14px;
+    color: #666;
+    margin-left: 30px;
+  }
+  
