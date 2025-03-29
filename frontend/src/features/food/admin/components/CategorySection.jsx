@@ -176,7 +176,7 @@ const CategorySection = () => {
       {selectedCategory && viewCategory && (
         <Modal
           isOpen={viewCategory}
-          title="Hotel_Name"
+          title="Twin Green"
           onClose={toggleViewModal}
         >
           <div className="p-6 bg-white rounded-xl shadow-lg relative">

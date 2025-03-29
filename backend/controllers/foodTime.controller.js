@@ -31,7 +31,9 @@ exports.createTime = async (req, res) => {
 
 exports.getAllTimes = async (req, res) => {
   try {
-    const times = await FoodTime.find().select("-__v -createdAt -updatedAt");
+    const times = await FoodTime.find()
+      .select("-__v -createdAt -updatedAt")
+      .populate("food", "name description picture");
     res.status(200).json(times);
   } catch (error) {
     res.status(500).json({ error: error.message });

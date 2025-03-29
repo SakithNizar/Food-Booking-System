@@ -23,7 +23,7 @@ exports.getAllCategories = async (req, res) => {
   try {
     const categories = await FoodCategory.find()
       .select("name description food")
-      .populate("food", "name");
+      .populate("food", "name picture description");
     res.status(200).json(categories);
   } catch (error) {
     res.status(500).json({ error: error.message });
