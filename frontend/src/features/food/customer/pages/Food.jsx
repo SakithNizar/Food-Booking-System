@@ -15,15 +15,16 @@ const Food = () => {
           axiosInstance.get("/food-times"),
         ]);
 
-        // Filter out categories where 'food' is empty or undefined
-        const filteredCategories = categoriesResponse.data.filter(
-          (category) => Array.isArray(category.food) && category.food.length > 0
-        );
+        // Ensure 'food' is always an array to prevent errors
+        const filteredCategories = categoriesResponse.data.map((category) => ({
+          ...category,
+          food: Array.isArray(category.food) ? category.food : [], // Ensure 'food' is an array
+        }));
 
-        // Filter out times where 'food' is empty or undefined
-        const filteredTimes = timeResponse.data.filter(
-          (time) => Array.isArray(time.food) && time.food.length > 0
-        );
+        const filteredTimes = timeResponse.data.map((time) => ({
+          ...time,
+          food: Array.isArray(time.food) ? time.food : [], // Ensure 'food' is an array
+        }));
 
         setFoodCategories(filteredCategories);
         setFoodTime(filteredTimes);
@@ -62,6 +63,7 @@ const Food = () => {
           Categorize by Time
         </div>
       </div>
+
       {selectedTab === "Category"
         ? foodCategories.map((category) => (
             <div key={category._id} className="mb-10">
@@ -75,15 +77,15 @@ const Food = () => {
 
               {/* Food Cards */}
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-                {category.food.map((food) => (
-                  <FoodCard food={food} />
+                {category.food?.map((food) => (
+                  <FoodCard key={food._id} food={food} />
                 ))}
               </div>
             </div>
           ))
         : foodTime.map((time) => (
             <div key={time._id} className="mb-10">
-              {/* time Title */}
+              {/* Time Title */}
               <div className="mb-8 border-b-2 pb-2 flex justify">
                 <div className="flex-1">
                   <h2 className="text-2xl font-bold text-gray-900 mb-2">
@@ -102,8 +104,8 @@ const Food = () => {
 
               {/* Food Cards */}
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-                {time.food.map((food) => (
-                  <FoodCard food={food} />
+                {time.food?.map((food) => (
+                  <FoodCard key={food._id} food={food} />
                 ))}
               </div>
             </div>
