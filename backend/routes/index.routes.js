@@ -5,6 +5,7 @@ const upload = require("../config/multerConfig");
 const foodRoutes = require("./food.routes");
 const foodCategoryRoutes = require("./foodCategory.routes");
 const foodTimeRoutes = require("./foodTime.routes");
+const { getReportData } = require("../controllers/report.controller");
 
 router.use(foodRoutes);
 router.use(foodCategoryRoutes);
@@ -20,5 +21,8 @@ router.post("/upload", upload.single("image"), (req, res) => {
     res.status(500).json({ error: "Image upload failed" });
   }
 });
+
+
+router.get("/report-data", getReportData);
 
 module.exports = router;

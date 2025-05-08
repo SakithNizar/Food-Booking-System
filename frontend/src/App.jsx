@@ -10,6 +10,7 @@ import About from "./Pages/About.jsx";
 import AdminLayout from "./UI/layouts/AdminLayout.jsx";
 import FoodManager from "./features/food/admin/pages/FoodManager.jsx";
 import Food from "./features/food/customer/pages/Food.jsx";
+import CateringReportPage from "./features/food/admin/pages/CateringReportPage.jsx";
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
         {/* Admin Routes */}
         <Route path="/admin" element={<AdminLayout />}>
           <Route index element={<Navigate to="food" />} />
+          <Route path="report" element={<CateringReportPage />} />
           <Route path="food" element={<FoodManager />} />
         </Route>
       </Routes>
