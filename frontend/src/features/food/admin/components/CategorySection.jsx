@@ -146,7 +146,7 @@ const CategorySection = () => {
             name="name"
             value={formData.name}
             onChange={handleChange}
-            placeholder="Enter meal time"
+            placeholder="Enter meal category"
             className="w-full p-2 border border-gray-300 rounded mb-4"
           />
           <textarea

@@ -15,6 +15,20 @@ const FoodManager = () => {
   return (
     <div className="min-h-screen bg-gradient-to-tr from-emerald-100 via-white to-lime-100 p-6">
       <div className="max-w-7xl mx-auto space-y-8">
+        
+        {/* Twin Green Title */}
+        <div className="text-center">
+          <h2 className="text-3xl font-extrabold text-green-800 tracking-wide">
+            Twin Green Food Manager
+          </h2>
+          <button
+            onClick={() => navigate("/")}
+            className="mt-2 bg-green-500 text-white px-4 py-2 rounded-full shadow hover:bg-green-600 transition"
+          >
+            ← Back to Home
+          </button>
+        </div>
+
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <h1 className="text-4xl font-bold text-green-700 text-center md:text-left">
