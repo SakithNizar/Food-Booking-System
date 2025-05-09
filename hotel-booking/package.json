@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "jspdf": "^3.0.1",
+    "jspdf-autotable": "^5.0.2",
+    "pdfkit": "^0.17.1",
+    "react-csv": "^2.2.2"
+  }
+}

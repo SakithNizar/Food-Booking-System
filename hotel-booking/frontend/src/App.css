@@ -1,0 +1,308 @@
+/* App-specific styles */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header styles */
+.app-header {
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: all 0.3s ease;
+}
+
+.app-header.scrolled {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.header-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.app-header.scrolled .header-container {
+  padding: 0.7rem 2rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.logo img {
+  height: 60px;
+  width: auto;
+  transition: all 0.3s ease;
+}
+
+.app-header.scrolled .logo img {
+  height: 50px;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.logo-main {
+  display: flex;
+  gap: 5px;
+}
+
+.logo-twin,
+.logo-salankanda {
+  color: #7d624d; /* Brown color from logo */
+  font-weight: 600;
+}
+
+.logo-green {
+  color: #3c9a41; /* Green color from logo */
+  font-weight: 700;
+}
+
+.logo-twin,
+.logo-green {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+.logo-salankanda {
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.view-toggle {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-link {
+  background-color: transparent;
+  color: #7d624d; /* Brown color from logo */
+  border: 2px solid #7d624d;
+  padding: 8px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(125, 98, 77, 0.1);
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover::before {
+  left: 0;
+}
+
+.nav-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(125, 98, 77, 0.2);
+}
+
+.nav-link.active {
+  background-color: #7d624d; /* Brown color from logo */
+  color: white;
+}
+
+.nav-link.active:hover {
+  background-color: #54433a; /* Darker brown */
+}
+
+/* Main content area */
+main {
+  flex: 1;
+  padding: 20px;
+  background-color: #f8f5f2; /* Light beige background */
+}
+
+/* Footer styles */
+.app-footer {
+  background-color: #7d624d; /* Brown color from logo */
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: auto;
+}
+
+/* Home page styles */
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  padding: 2rem;
+  position: relative;
+}
+
+.home-content {
+  text-align: center;
+  max-width: 800px;
+  padding: 3rem;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.home-content h1 {
+  color: #7d624d; /* Brown color from logo */
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  position: relative;
+  z-index: 2;
+}
+
+.home-content p {
+  color: #666;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.mountain-decoration {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+  opacity: 0.1;
+}
+
+.mountain {
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.mountain-1 {
+  left: 20%;
+  border-width: 0 100px 100px 100px;
+  border-color: transparent transparent #7d624d transparent; /* Brown color */
+}
+
+.mountain-2 {
+  left: 60%;
+  border-width: 0 80px 80px 80px;
+  border-color: transparent transparent #3c9a41 transparent; /* Green color */
+}
+
+.home-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.home-button {
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.home-button.guest {
+  background-color: #3c9a41; /* Green color from logo */
+  color: white;
+}
+
+.home-button.guest:hover {
+  background-color: #27652b; /* Darker green */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(60, 154, 65, 0.3);
+}
+
+.home-button.admin {
+  background-color: #7d624d; /* Brown color from logo */
+  color: white;
+}
+
+.home-button.admin:hover {
+  background-color: #54433a; /* Darker brown */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(125, 98, 77, 0.3);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .app-header.scrolled .header-container {
+    padding: 0.7rem 1rem;
+  }
+
+  .home-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .home-content {
+    padding: 2rem 1rem;
+  }
+
+  .home-content h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .view-toggle {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .nav-link {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+
+  .logo img {
+    height: 45px;
+  }
+
+  .logo-twin,
+  .logo-green {
+    font-size: 1rem;
+  }
+
+  .logo-salankanda {
+    font-size: 0.8rem;
+  }
+}
