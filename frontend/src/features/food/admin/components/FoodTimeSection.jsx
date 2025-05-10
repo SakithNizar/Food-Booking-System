@@ -106,7 +106,7 @@ const FoodTimeSection = () => {
   return (
     <div className="p-6 bg-white shadow-lg rounded-lg">
       <div className="flex justify-between items-center mb-4">
-        <h2 className="text-xl font-semibold">Manage Meal Time</h2>
+        <h2 className="text-xl font-semibold">Manage Meal Buffet</h2>
         <button
           onClick={() => openModal()}
           className="text-white bg-blue-500 hover:bg-blue-700 p-2 rounded-full shadow-md cursor-pointer"
@@ -129,7 +129,7 @@ const FoodTimeSection = () => {
       {/* Modal for adding new buffet time */}
       <Modal
         isOpen={modalOpen}
-        title={isEditing ? "Edit Meal Time" : "Add Meal Time"}
+        title={isEditing ? "Edit Meal Time" : "Add Buffet Detals"}
         onClose={closeModal}
       >
         <div className="p-4">
@@ -138,7 +138,7 @@ const FoodTimeSection = () => {
             name="name"
             value={formData.name}
             onChange={handleChange}
-            placeholder="Enter meal time"
+            placeholder="Enter buffet name"
             className="w-full p-2 border border-gray-300 rounded mb-4"
           />
           <textarea
@@ -179,7 +179,7 @@ const FoodTimeSection = () => {
                 <FaSave className="inline" /> Save Changes
               </>
             ) : (
-              "Add Meal Time"
+              "Add Buffet Details"
             )}
           </button>
         </div>
@@ -187,7 +187,7 @@ const FoodTimeSection = () => {
 
       {/* Modal for viewing meal time details */}
       {selectedTime && (
-        <Modal isOpen={viewTime} title="Hotel_Name" onClose={toggleViewModal}>
+        <Modal isOpen={viewTime} title="Twin Green" onClose={toggleViewModal}>
           <div className="p-6 bg-white rounded-xl shadow-lg relative">
             {/* Action Buttons */}
             <div className="absolute top-4 right-4 flex space-x-3">
