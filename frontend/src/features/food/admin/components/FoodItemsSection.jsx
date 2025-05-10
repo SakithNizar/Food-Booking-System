@@ -347,7 +347,7 @@ const FoodItemsSection = () => {
         <Modal
           isOpen={viewFoodItem}
           onClose={toggleViewModal}
-          title={"Hotel_Name"}
+          title={"Twin Green"}
         >
           <div className="p-4">
             {/* Food Image */}
